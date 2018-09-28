@@ -1,0 +1,62 @@
+
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body><table  class="table table-striped table-hover ">
+  <tr>
+    <th>
+    ID
+    </th>
+    <th>
+      First Name
+    </th>
+    <th>
+      Last Name
+    </th>
+    <th>
+      UserName
+    </th>
+    <th>
+      Email
+    </th>
+   
+    <th>
+      Gender
+    </th>
+
+    <th>
+     <a href="/Logout" class="btn btn-danger">Logout</a>
+    </th>
+    
+  </tr>
+  <tr *ngFor="let showdata of gtdata">
+    <td >
+      {{showdata.id}}
+    </td>
+    <td>
+      {{showdata.firstname}}
+    </td>
+    <td>
+      {{showdata.lastname}}
+    </td>
+    <td>
+      {{showdata.username}}
+    </td>
+    <td>
+      {{showdata.email}}
+    </td>
+    <td>
+      {{showdata.gender}}
+    </td>
+    
+  </tr>
+</table>
+</body>
+</html>

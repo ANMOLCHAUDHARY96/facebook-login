@@ -1,0 +1,62 @@
+<div class="mt-4 col-8 offset-2">
+  <div class="card">
+    <div class="card-header">Register Here</div>
+    <div class="card-body">
+      <form [formGroup]="registrationForm" (ngSubmit)="registeruser(registrationForm)">
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firstname" placeholder="First Name">
+            <small *ngIf="registrationForm.get('firstname').hasError('required') && registrationForm.get('firstname').touched">First
+              name is required</small>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="lastname" placeholder="LastName">
+            <small *ngIf="registrationForm.get('lastname').hasError('required') && registrationForm.get('lastname').touched">Last
+              name is required</small>
+          </div>
+        </div>
+
+
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Username</label>
+            <input type="text" class="form-control" formControlName="username" placeholder="Username">
+            <small *ngIf="registrationForm.get('username').hasError('required') && registrationForm.get('username').touched">Username
+             is required</small>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Email">
+            <small *ngIf="registrationForm.get('email').hasError('required') && registrationForm.get('email').touched">Email
+            is required</small>
+          </div>
+        </div>
+
+
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Password</label>
+            <input type="Password" class="form-control" formControlName="password" placeholder="Password">
+            <small *ngIf="registrationForm.get('password').hasError('required') && registrationForm.get('password').touched">Password
+             is required</small>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Gender</label>
+            <input type="text" class="form-control" formControlName="gender" placeholder="Gender">
+            <small *ngIf="registrationForm.get('gender').hasError('required') && registrationForm.get('gender').touched">Password
+            is required</small>
+          </div>
+        </div>
+
+
+        
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
